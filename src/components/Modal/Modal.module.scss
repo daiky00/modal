@@ -1,0 +1,95 @@
+@import '../../variables';
+
+// Modal Component SCSS
+.modal {
+  background: $white;
+  border-radius: 10px;
+  position: fixed; /* Stay in place */
+  transform: translate(-50%, -50%);
+  left: 50%; 
+  top: -100%;
+  width: 400px; /* Full width */
+  height: 100%; /* Full height */
+  max-height: 600px;
+  padding-bottom: 1rem;
+  overflow: hidden;
+  z-index: 1;
+
+  @media screen and (max-width: $break-small) {
+    width: 100%;
+    max-height: 100%; 
+	}
+}
+
+.close {
+  top: -100%; 
+  transition:  top 0.5s;
+}
+
+.open {
+  top: 50%;
+  transition: top 0.5s;
+}
+
+.closeIcon {
+  z-index: 999;
+  float: right;
+  margin: 10px 10px 0 0;
+  font-size: 40px;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+}
+
+.closeIconInvert {
+  color: $white;
+  background: radial-gradient($black 1%, transparent 66.67%, transparent 33.33%);
+  border-radius: 20px;
+}
+// ModalMedia Component SCSS
+
+.media {
+  position: relative;
+  z-index: -1;
+}
+
+.mediaWrapper {
+  background: linear-gradient(to bottom, transparent 40%, $black 90%); 
+  padding: 59% 1rem 1rem;
+}
+
+.title {
+  margin: 0;
+  font-weight: 100;
+  font-size: 1rem;
+  color: $white;
+}
+
+.subtitle {
+  margin: 0;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: $white;
+}
+
+
+// ModalContent Component SCSS
+
+.content {
+  display: block;
+  overflow: scroll;
+  height: 230px;
+  padding: 1rem;
+}
+
+// ModalActions Component SCSS
+
+.actions {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  background: linear-gradient(to bottom, transparent 1%, $white 15%); 
+  
+}
